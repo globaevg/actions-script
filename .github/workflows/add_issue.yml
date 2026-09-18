@@ -1,5 +1,6 @@
 name: Learning GitHub Script
 on:
+  workflow_dispatch:
   issues:
     types: [opened]
 jobs:
