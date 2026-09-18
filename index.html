@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actions Scripts</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Project navigation">
+        <div class="brand">
+          <span class="brand-mark">AS</span>
+          <div>
+            <strong>Actions Scripts</strong>
+            <span>Local runner</span>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="Sections">
+          <button class="nav-item is-active" type="button">Dashboard</button>
+          <button class="nav-item" type="button">Scripts</button>
+          <button class="nav-item" type="button">Runs</button>
+          <button class="nav-item" type="button">Settings</button>
+        </nav>
+      </aside>
+
+      <section class="workspace" aria-label="Dashboard">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Today</p>
+            <h1>Script Control Room</h1>
+          </div>
+          <button class="primary-button" id="runAll" type="button">Run All</button>
+        </header>
+
+        <section class="metrics" aria-label="Run metrics">
+          <article class="metric">
+            <span>Ready</span>
+            <strong id="readyCount">4</strong>
+          </article>
+          <article class="metric">
+            <span>Successful</span>
+            <strong id="successCount">12</strong>
+          </article>
+          <article class="metric">
+            <span>Average</span>
+            <strong>1.8s</strong>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <div class="panel">
+            <div class="panel-header">
+              <h2>Available Scripts</h2>
+              <span class="status-pill">Idle</span>
+            </div>
+            <div class="script-list" id="scriptList"></div>
+          </div>
+
+          <div class="panel activity-panel">
+            <div class="panel-header">
+              <h2>Activity</h2>
+              <button class="ghost-button" id="clearLog" type="button">Clear</button>
+            </div>
+            <ol class="activity-log" id="activityLog" aria-live="polite"></ol>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
