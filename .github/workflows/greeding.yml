@@ -5,11 +5,9 @@ on:
     branches:
       - main
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Print greeting
         run: echo "Hello world!"
-
